@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --texto_Primario: #111827;
+    --texto_secundario: #4B5563;
+    --fondo_base: #F9FAFB;
+    --superficie_cards: #FFFFFF;
+    --Primario: #2563EB;
+    --bordes: #E5E7EB;
+    --acento_suave: #DBEAFE;
+}
+
+body{
+    background-color: var(--fondo_base);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.navbar_body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8em;
+    border-bottom: 1px solid var(--acento_suave);
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.842);
+    z-index: 2;
+}
+
+.navbar_body .nav_title span{
+    font-weight: 600;
+    font-size: 1.4em;
+    color: var(--texto_Primario);
+}
+
+.navbar_body .nav_titles {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.navbar_body .nav_titles span{
+    text-decoration: none;
+    background-color: var(--Primario);
+    color: var(--superficie_cards);
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.main_present{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 7.5em 8em;
+}
+
+.main_present .main_info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.main_present .main_info .encabezado_present{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.main_present .main_info .encabezado_present button{
+    background-color: transparent;
+    color: var(--texto_secundario);
+    font-weight: 600;
+    border: none;
+}
+
+.main_present .main_info .encabezado_present button:nth-child(1){
+    background-color: var(--acento_suave);
+    color: var(--Primario);
+    border: none;
+    border-radius: 8px;
+    padding: 5px 9px;
+}
+
+.main_present .main_info .main_texInfo span{
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--texto_Primario);
+}
+
+.main_present .main_info .main_texInfo .main_infoAboutMe{
+    color: var(--texto_secundario);
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.main_present .main_photo img{
+    width: 480px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.main_present .main_photo  .main_active_photo {
+    background-color: var(--superficie_cards);
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 15px;
+    border-radius: 8px;
+    padding: 4px 12px;
+}
+
+.main_present .main_photo  .main_active_photo span{
+    color: var(--Primario);
+    font-weight: 700;
+}
+
+.section_valores{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0px 8em;
+    padding-bottom: 2em;
+}
+
+.section_valores .card{
+    background-color: var(--superficie_cards);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 350px;
+    padding: 6px 12px;
+    border-bottom: 1px solid var(--bordes);
+    transition: all .3s ease;
+}
+
+.section_valores .card .card_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--Primario);
+    font-weight: 600;
+}
+
+.section_valores .card .valores_cards{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.section_valores .card .valores_cards span{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--texto_Primario);
+}
+
+.section_valores .card .valores_cards div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.section_valores .card .valores_cards div button{
+    background-color: transparent;
+    border: none;
+    color: var(--texto_Primario);
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+.section_logros, .section_meta{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 2em 8em;
+}
+
+.section_logros .section_logros_titles{
+    color: var(--texto_Primario);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.section_logros .card_logros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 170px ;
+    gap: 24px;
+}
+
+.section_logros .card_logros .card{
+    background-color: var(--superficie_cards);
+    padding: 24px;
+    border-radius: 8px;
+    display: flex;
+    gap: 22px;
+    border-bottom: 1px solid var(--bordes);
+}
+
+.section_logros .card_logros .card .card_header_logros button{
+    background-color: var(--acento_suave);
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 16px;
+    color: var(--Primario);
+    font-weight: 600;
+}
+
+.section_logros .card_logros .card .card_info_de_logros span{
+    color: var(--Primario);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.section_logros .card_logros .card .container_logro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--texto_secundario);
+    font-size: 14.5px;
+    font-weight: 400;
+}
+
+.section_logros .card_logros .card .container_logro span{
+    color: var(--texto_Primario);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.section_meta .section_header_meta{
+    color: var(--Primario);
+    font-weight: 600;
+    font-size: 14.5px;
+}
+
+.section_meta .container_meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section_meta .container_meta .container_meta_info {
+    padding: 12px 0px;
+    width: 650px;
+    color: var(--texto_secundario);
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: -20px;
+}
+
+.section_meta .container_meta .container_meta_info span{
+    color: var(--texto_Primario);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.section_meta .container_meta .container_ambitos{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--superficie_cards);
+    width: 440px;
+    padding: 16px 22px;
+    border-radius: 8px;
+    border: 1px solid var(--bordes);
+}
+
+.section_meta .container_meta .container_ambitos .container_header_ambitos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--Primario);
+    font-weight: 700;
+    font-size: 14.5px;
+}
+
+.section_meta .container_meta .container_ambitos .container_header_ambitos button{
+    border: none;
+    background-color: var(--acento_suave);
+    color: var(--Primario);
+    border-radius: 8px;
+    padding: 4px 14px;
+    font-size: 15px;
+}
+
+.section_meta .container_meta .container_ambitos .container_ambito_card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section_meta .container_meta .container_ambitos .container_ambito_card .card_ambito{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section_meta .container_meta .container_ambitos .container_ambito_card .card_ambito div{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    color: var(--texto_secundario);
+    font-size: 14.5px;
+}
+
+.section_meta .container_meta .container_ambitos .container_ambito_card .card_ambito div span{
+    color: var(--texto_Primario);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.section_meta .container_meta .container_ambitos .container_ambito_card .card_ambito button{
+    padding: 2px 12px;
+    border: none;
+    background-color: var(--acento_suave);
+    color: var(--Primario);
+    border-radius: 8px;
+    height: 35px;
+}
+
+.section_presencia_digital{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 4em 8em;
+}
+
+.section_presencia_digital .header_presencia_digital, 
+.section_vision_etica .section_header_vision,
+.section_proyeccion .section_header_proyeccion{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: var(--Primario);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.section_presencia_digital .header_presencia_digital span,
+.section_vision_etica .section_header_vision span,
+.section_proyeccion .section_header_proyeccion span{
+    color: var(--texto_Primario);
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.section_presencia_digital .container_cards_presencia_digital {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px;
+    gap: 24px;
+    padding: 16px 24px;
+}
+
+.section_presencia_digital .container_cards_presencia_digital .card{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px;
+}
+
+.section_presencia_digital .container_cards_presencia_digital .card .card_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section_presencia_digital .container_cards_presencia_digital .card .card_header span{
+    color: var(--texto_Primario);
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.section_presencia_digital .container_cards_presencia_digital .card .card_header button{
+    border: none;
+    background-color: var(--acento_suave);
+    padding: 2px 6px;
+    font-weight: 600;
+    color: var(--Primario);
+    font-size: 14px;
+    border-radius: 8px;
+    margin-top: 3.5px;
+}
+
+.section_presencia_digital .container_cards_presencia_digital .card .card_info{
+    color: var(--texto_secundario);
+    font-size: 15px;
+}
+
+.section_presencia_digital .container_cards_presencia_digital .card .card_item_huella{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    margin-top: 15px;
+}
+
+.section_presencia_digital .container_cards_presencia_digital .card .card_item_huella .card_item_logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.section_presencia_digital .container_cards_presencia_digital .card .card_item_huella .card_item_logo span{
+    color: var(--texto_Primario);
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section_presencia_digital .container_cards_presencia_digital .card .card_item_huella .card_item_logo button{
+    border: none;
+    background-color: var(--acento_suave);
+    color: var(--Primario);
+    font-size: 12.5px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+.section_presencia_digital .container_cards_presencia_digital .card .card_item_mejoras{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 0px;
+}
+
+.section_presencia_digital .container_cards_presencia_digital .card .card_item_mejoras .card_item_mejora{
+    display: flex;
+    gap: 12px;
+    padding: 8px;
+}
+
+.section_presencia_digital .container_cards_presencia_digital .card .card_item_mejoras .card_item_mejora div button{
+    background-color: transparent;
+    border: none;
+    color: var(--Primario);
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.section_presencia_digital .container_cards_presencia_digital .card .card_item_mejoras .card_item_info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--texto_secundario);
+    font-size: 14.5px;
+}
+
+.section_presencia_digital .container_cards_presencia_digital .card .card_item_mejoras .card_item_info span{
+    color: var(--texto_Primario);
+    font-size: 16.5px;
+    font-weight: 500;
+}
+
+.section_vision_etica, .section_proyeccion{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 6em 8em;
+}
+
+.section_vision_etica .section_header_vision{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--Primario);
+    font-weight: 14.5px;
+}
+
+.section_vision_etica .container_cards_vision, 
+.section_proyeccion .container_cards_proyeccion{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 300px;
+    gap: 24px;
+}
+
+.section_vision_etica .container_cards_vision .card_item_vision{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid var(--bordes);
+    padding: 32px 26px;
+    background-color: var(--superficie_cards);
+}
+
+.section_vision_etica .container_cards_vision .card_item_vision .card_item_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.section_vision_etica .container_cards_vision .card_item_vision .card_item_header span{
+    color: var(--Primario);
+    background-color: var(--acento_suave);
+    padding: 4px 12px;
+    font-size: 13.5px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.section_vision_etica .container_cards_vision .card_item_vision .card_item_header button{
+    color: var(--texto_Primario);
+    background-color: var(--acento_suave);
+    padding: 10px 14px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.section_vision_etica .container_cards_vision .card_item_vision .card_item_info,
+.section_proyeccion .container_cards_proyeccion .card_item_proyeccion .card_item_info{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--texto_secundario);
+    font-size: 14.5px;
+}
+
+.section_vision_etica .container_cards_vision .card_item_vision .card_item_info span,
+.section_proyeccion .container_cards_proyeccion .card_item_proyeccion .card_item_info span{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--texto_Primario);
+}
+
+.section_proyeccion .container_cards_proyeccion .card_item_proyeccion{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: var(--superficie_cards);
+    margin-top: 20px;
+    padding: 16px 24px;
+}
+
+.section_proyeccion .container_cards_proyeccion .card_item_proyeccion .card_item_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section_proyeccion .container_cards_proyeccion .card_item_proyeccion .card_item_header span{
+    color: var(--superficie_cards);
+    background-color: var(--Primario);
+    border-radius: 6px;
+    padding: 2px 12px;
+    font-weight: 500;
+    font-size: 14.5px;
+}
+
+.section_proyeccion .container_cards_proyeccion .card_item_proyeccion .card_item_header button{
+    background-color: transparent;
+    border: none;
+    color: var(--texto_secundario);
+    font-weight: 400;
+    font-size: 14.5px;
+    padding: 2px 12px;
+}
+
+.section_compromiso .container_compromiso{
+    background-color: var(--Primario);
+    padding: 2em 6em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: var(--superficie_cards);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.section_compromiso .container_compromiso .section_header_compromiso{
+    color: var(--superficie_cards);
+    font-size: 16.5px;
+    font-weight: 500;
+}
+
+.section_compromiso .container_compromiso span{
+    color: var(--superficie_cards);
+    font-size: 3em;
+    font-weight: 700;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2em;
+    border-top: 1px solid var(--bordes);
+    margin-top: 70px;
+    color: var(--texto_secundario);
+    font-size: 14.5px;
+}
